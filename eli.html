@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chocolate Chip Cookie Recipe</title>
+    <style>
+        /* General Styling */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            background-color: #f9f9f9;
+        }
+
+        header, footer {
+            background-color: #e0b567;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        #recipe-title {
+            font-family: 'Georgia', serif;
+            font-size: 2.5em;
+            text-transform: uppercase;
+            margin: 0;
+        }
+
+        .ingredients, .steps {
+            margin: 20px auto;
+            padding: 20px;
+            max-width: 800px;
+            background-color: white;
+            border: 2px solid #e0b567;
+            border-radius: 5px;
+        }
+
+        h2 {
+            color: #333;
+            font-family: 'Verdana', sans-serif;
+        }
+
+        ul, ol {
+            margin-left: 20px;
+        }
+
+        .recipe-link {
+            display: inline-block;
+            color: #e0b567;
+            text-decoration: none;
+            font-weight: bold;
+            margin: 20px;
+        }
+
+        .recipe-link:hover {
+            color: #d49b42;
+            text-decoration: underline;
+        }
+
+        /* Button Styling */
+        button {
+            background-color: #e0b567;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1em;
+            cursor: pointer;
+            text-align: center;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #d49b42;
+        }
+
+        /* Form Styling */
+        form {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            border: 2px solid #e0b567;
+            border-radius: 5px;
+            background-color: white;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            margin: 10px 0 5px;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 id="recipe-title">Chocolate Chip Cookie Recipe</h1>
+    </header>
+
+    <main>
+        <section class="ingredients">
+            <h2>Ingredients</h2>
+            <ul>
+                <li>2 cups of flour</li>
+                <li>1 cup of sugar</li>
+                <li>1 cup of chocolate chips</li>
+            </ul>
+        </section>
+
+        <section class="steps">
+            <h2>Steps</h2>
+            <ol>
+                <li>Preheat the oven to 350°F.</li>
+                <li>Mix all ingredients in a bowl.</li>
+                <li>Bake for 15 minutes.</li>
+            </ol>
+        </section>
+
+        <a href="https://example.com" class="recipe-link">Recipe Source</a>
+
+        <button onclick="document.getElementById('recipe-form').scrollIntoView()">Submit a Recipe</button>
+    </main>
+
+    <section id="recipe-form">
+        <h1>Submit Your Recipe</h1>
+        <form action="/submit-recipe" method="POST">
+            <label for="recipe-name">Recipe Name:</label>
+            <input type="text" id="recipe-name" name="recipe-name" required>
+
+            <label for="ingredients">Ingredients:</label>
+            <textarea id="ingredients" name="ingredients" rows="4" required></textarea>
+
+            <label for="instructions">Instructions:</label>
+            <textarea id="instructions" name="instructions" rows="4" required></textarea>
+
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>Enjoy your cookies!</p>
+    </footer>
+</body>
+</html>
